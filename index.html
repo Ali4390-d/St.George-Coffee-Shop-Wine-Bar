@@ -1,1 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>St. George Coffee Shop & Wine Bar | London</title>
+<meta name="description" content="St. George Coffee Shop & Wine Bar. Coffee by day. Wine by night. Premium specialty coffee and natural wines in London.">
 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styel.css" >
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <a href="#home" class="logo">
+    <i class="fas fa-wine-glass-alt"></i>
+    St. George
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#locations" class="nav-link">Locations</a>
+    <a href="#menu" class="nav-link">Menu</a>
+    <a href="#wine-bar" class="nav-link">Wine Bar</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#reserve" class="header-cta mobile-cta" style="display:none;">Reserve Table</a>
+  </nav>
+  <a href="#reserve" class="header-cta">Reserve Table</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=2000&auto=format&fit=crop" alt="Coffee and Wine setting">
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow" style="color: var(--gold-light);">London's Premium Destination</span>
+    <h1>Coffee by day.<br><em>Wine by night.</em></h1>
+    <p class="hero-tagline">An elegant transition from artisan morning brews to sophisticated evening pours.</p>
+    
+    <div class="hero-rotator">
+      <span id="rotator-text">Specialty Coffee</span>
+    </div>
+    
+    <div class="hero-actions">
+      <a href="#reserve" class="btn btn-primary">
+        Reserve a Table <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#menu" class="btn btn-outline">Explore Menu</a>
+    </div>
+  </div>
+  <a href="#locations" class="scroll-down">
+    <i class="fas fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ============ LOCATIONS ============ -->
+<section class="section" id="locations">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Find Us</span>
+      <h2>Our London Locations</h2>
+      <p>Whether you're seeking the perfect morning espresso or a refined evening glass of natural wine, find us in two of London's most iconic neighborhoods.</p>
+    </div>
+    
+    <div class="locations-grid">
+      <!-- Location 1: Kings Road -->
+      <div class="location-card reveal">
+        <div class="location-img">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop" alt="Kings Road Interior">
+          <div class="save-btn" onclick="this.classList.toggle('active')">
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+        <div class="location-body">
+          <h3 class="location-name">Kings Road</h3>
+          <p class="location-address">
+            <i class="fas fa-map-marker-alt"></i>
+            126 King’s Rd, London SW3 4TR, United Kingdom
+          </p>
+          
+          <div class="hours-tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'kr-coffee')"><i class="fas fa-mug-hot"></i> Coffee</button>
+            <button class="tab-btn" onclick="switchTab(event, 'kr-wine')"><i class="fas fa-wine-glass-alt"></i> Wine Bar</button>
+          </div>
+          
+          <div id="kr-coffee" class="tab-content active">
+            <ul class="hours-list">
+              <li><span class="day">Monday - Friday</span><span class="time">7:30am – 6:00pm</span></li>
+              <li><span class="day">Saturday - Sunday</span><span class="time">8:00am – 6:00pm</span></li>
+            </ul>
+          </div>
+          <div id="kr-wine" class="tab-content">
+            <ul class="hours-list">
+              <li><span class="day">Monday - Saturday</span><span class="time">4:30pm – 9:00pm</span></li>
+              <li><span class="day">Sunday</span><span class="time">3:00pm – 9:00pm</span></li>
+            </ul>
+          </div>
+          
+          <div class="location-contact">
+            <a href="tel:+442085699369"><i class="fas fa-phone"></i> +44 20 8569 9369</a>
+            <a href="mailto:info@stgeorgecoffee.co.uk"><i class="fas fa-envelope"></i> info@stgeorgecoffee.co.uk</a>
+          </div>
+          
+          <div class="location-footer">
+            <a href="https://maps.google.com/?q=126 King's Rd, London SW3 4TR" target="_blank" class="btn btn-dark">Get Directions</a>
+            <a href="#reserve" class="btn btn-primary">Reserve</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 2: St. Martin's Lane -->
+      <div class="location-card reveal">
+        <div class="location-img">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" alt="St Martin's Lane Interior">
+          <div class="save-btn" onclick="this.classList.toggle('active')">
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+        <div class="location-body">
+          <h3 class="location-name">St. Martin’s Lane</h3>
+          <p class="location-address">
+            <i class="fas fa-map-marker-alt"></i>
+            112 St. Martin’s Lane, London WC2N 4BD, United Kingdom
+          </p>
+          
+          <div class="hours-tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'sm-coffee')"><i class="fas fa-mug-hot"></i> Coffee</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sm-wine')"><i class="fas fa-wine-glass-alt"></i> Wine Bar</button>
+          </div>
+          
+          <div id="sm-coffee" class="tab-content active">
+            <ul class="hours-list">
+              <li><span class="day">Monday</span><span class="time closed">Closed</span></li>
+              <li><span class="day">Tuesday - Sunday</span><span class="time">7:30am – 4:00pm</span></li>
+            </ul>
+          </div>
+          <div id="sm-wine" class="tab-content">
+            <ul class="hours-list">
+              <li><span class="day">Monday</span><span class="time closed">Closed</span></li>
+              <li><span class="day">Tuesday - Sunday</span><span class="time">5:00pm – 10:30pm</span></li>
+            </ul>
+          </div>
+          
+          <div class="location-contact">
+            <a href="mailto:chef@stgeorgemarket.co.uk"><i class="fas fa-envelope"></i> chef@stgeorgemarket.co.uk</a>
+          </div>
+          
+          <div class="location-footer">
+            <a href="https://maps.google.com/?q=112 St. Martin's Lane, London WC2N 4BD" target="_blank" class="btn btn-dark">Get Directions</a>
+            <a href="#reserve" class="btn btn-primary">Reserve</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WINE BAR HIGHLIGHT ============ -->
+<section class="section wine-bar" id="wine-bar">
+  <div class="reserve-bg">
+    <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?q=80&w=2000&auto=format&fit=crop" alt="Wine Background">
+  </div>
+  <div class="container">
+    <div class="wine-bar-grid">
+      <div class="reveal">
+        <i class="fas fa-wine-glass-alt wine-icon-large"></i>
+        <span class="eyebrow">Evening Experience</span>
+        <h2>The Wine Bar</h2>
+        <p>As the sun sets, St. George transforms. Our curated selection of natural and biodynamic wines takes center stage. Accompanied by artisanal cheese boards and small plates, it's the perfect retreat for an elegant evening in the city.</p>
+        <a href="#reserve" class="btn btn-primary">Book a Table <i class="fas fa-arrow-right"></i></a>
+      </div>
+      
+      <div class="wine-hours-card reveal">
+        <h3><i class="fas fa-clock"></i> Wine Bar Hours</h3>
+        <div class="hours-tabs" style="border-color: var(--line-light);">
+          <button class="tab-btn active" style="color: var(--text-muted-light);" onclick="switchWineTab(event, 'wine-kr')">Kings Road</button>
+          <button class="tab-btn" style="color: var(--text-muted-light);" onclick="switchWineTab(event, 'wine-sm')">St. Martin's</button>
+        </div>
+        
+        <div id="wine-kr" class="tab-content active">
+          <ul class="wine-hours-list">
+            <li><span class="day">Monday - Saturday</span><span class="time">4:30pm – 9:00pm</span></li>
+            <li><span class="day">Sunday</span><span class="time">3:00pm – 9:00pm</span></li>
+          </ul>
+        </div>
+        <div id="wine-sm" class="tab-content">
+          <ul class="wine-hours-list">
+            <li><span class="day">Monday</span><span class="time closed">Closed</span></li>
+            <li><span class="day">Tuesday - Sunday</span><span class="time">5:00pm – 10:30pm</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Loved by Londoners</span>
+      <h2>What Our Guests Say</h2>
+      <p>Consistently rated among the top coffee and wine destinations in London.</p>
+    </div>
+    
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card reveal">
+        <div class="quote-icon">”</div>
+        <div class="review-rating">
+          <span class="rating-num">4.7</span>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="review-count"><span class="counter" data-target="820">0</span> reviews</span>
+        </div>
+        <p class="review-text">"Excellent coffee, fabulous brownie in a truly gorgeous setting."</p>
+        <div class="review-source">Host Café - Google</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card reveal">
+        <div class="quote-icon">”</div>
+        <div class="review-rating">
+          <span class="rating-num">4.7</span>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="review-count"><span class="counter" data-target="297">0</span> reviews</span>
+        </div>
+        <p class="review-text">"Best coffee I've ever had, served by absolutely lovely staff."</p>
+        <div class="review-source">St. George Coffee Shop - Google</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card reveal">
+        <div class="quote-icon">”</div>
+        <div class="review-rating">
+          <span class="rating-num">4.8</span>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span class="review-count"><span class="counter" data-target="1146">0</span> reviews</span>
+        </div>
+        <p class="review-text">"A Parisian escape in the heart of London. Impeccable taste and atmosphere."</p>
+        <div class="review-source">Cafe Parisienne - TripAdvisor</div>
+        <div class="review-price">£10 - £20 range</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVE TABLE ============ -->
+<section class="section reserve-section" id="reserve">
+  <div class="reserve-bg">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2000&auto=format&fit=crop" alt="Restaurant Table">
+  </div>
+  <div class="container">
+    <div class="reserve-wrapper reveal">
+      <span class="eyebrow">Book Your Experience</span>
+      <h2>Reserve a Table</h2>
+      <p>Secure your spot for an evening of natural wines and fine dining, or a morning of perfect coffee.</p>
+      
+      <form class="reserve-form" onsubmit="event.preventDefault(); alert('Reservation request sent! We will confirm shortly.');">
+        <div class="form-group">
+          <label for="res-name">Full Name</label>
+          <input type="text" id="res-name" class="form-control" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="res-email">Email Address</label>
+          <input type="email" id="res-email" class="form-control" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="res-loc">Location</label>
+          <select id="res-loc" class="form-control" required>
+            <option value="" disabled selected>Select Location</option>
+            <option>Kings Road</option>
+            <option>St. Martin's Lane</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="res-guests">Guests</label>
+          <select id="res-guests" class="form-control" required>
+            <option value="" disabled selected>Select Number</option>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3 People</option>
+            <option>4 People</option>
+            <option>5+ People</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="res-date">Date</label>
+          <input type="date" id="res-date" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="res-time">Time</label>
+          <input type="time" id="res-time" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3><i class="fas fa-wine-glass-alt"></i> St. George</h3>
+        <p>Coffee by day. Wine by night. A premium London destination for the discerning palate.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="#locations">Kings Road</a></li>
+          <li><a href="#locations">St. Martin's Lane</a></li>
+          <li><a href="#" target="_blank">Order Online</a></li>
+          <li><a href="#" target="_blank">Gift Cards</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><a href="#wine-bar">Wine Bar</a></li>
+          <li><a href="#locations">Coffee Shop</a></li>
+          <li><a href="#reserve">Reservations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> +44 20 8569 9369</p>
+        <p style="margin-top: 0.8rem;"><i class="fas fa-envelope"></i> info@stgeorgecoffee.co.uk</p>
+        <p style="margin-top: 0.8rem;"><i class="fas fa-envelope"></i> chef@stgeorgemarket.co.uk</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>&copy; 2024 St. George Coffee Shop & Wine Bar. All rights reserved.</div>
+      <div>Designed with <i class="fas fa-heart" style="color: var(--gold);"></i> in London</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Reserve Button -->
+<a href="#reserve" class="fab">
+  <i class="fas fa-calendar-alt"></i> Reserve
+</a>
+
+</body>
+</html>
